@@ -1,0 +1,12 @@
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 96px;
+}
+
+.navigation__link {
+    text-transform: uppercase;
+    padding: 0 15px;
+}
