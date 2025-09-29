@@ -1,10 +1,10 @@
 import styles from "./page.module.css";
 
-export default function Home() {
+export default function About() {
   return (
     <div className={styles.page}>
       <main>
-        TODO: home page
+        TODO: about page
       </main>
     </div>
   );
