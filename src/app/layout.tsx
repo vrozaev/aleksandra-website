@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Footer } from "@/ui/components/Footer/Footer";
 import { Navigation } from "@/ui/components/Navigation/Navigation";
+import { Raleway } from 'next/font/google'
+ 
+const raleway = Raleway({
+  subsets: ['latin', 'cyrillic'],
+})
 
 export const metadata: Metadata = {
   title: "Aleksandra Borisova Studio",
@@ -14,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={raleway.className}>
       <body>
         <Navigation />
         {children}

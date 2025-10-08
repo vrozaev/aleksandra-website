@@ -1,0 +1,17 @@
+.blockTextAndImage {
+    display: flex;
+}
+
+.blockTextAndImage__section {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blockTextAndImage__title {
+    margin-bottom: 24px;
+}
+
+.blockTextAndImage__paragraph {
+    padding-bottom: 1.5em;
+}

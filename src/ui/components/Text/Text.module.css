@@ -1,0 +1,23 @@
+.h1 {
+    font-family: Raleway;
+    letter-spacing: 5px;
+    font-size: 40px;
+    line-height: 68px;
+    font-weight: 400;
+}
+
+.h2 {
+    font-family: Raleway;
+    letter-spacing: 5px;
+    font-size: 28px;
+    line-height: 48px;
+    font-weight: 400;
+}
+
+.body {
+    font-family: Raleway;
+    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 400;
+}
