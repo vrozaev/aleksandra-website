@@ -18,8 +18,6 @@ export const BlockTextAndImage: React.FC<BlockTextAndImageProps> = ({
       <Image src={image} alt="about" height={427} width={285} />
     </div>
     <div className={styles.blockTextAndImage__section}>
-      <Text variant='h2' className={styles.blockTextAndImage__title}>{title}</Text>
-
       {
         paragraphs.map((item, index) => (
           <Text variant='body' className={styles.blockTextAndImage__paragraph} key={index}>{item}</Text>

@@ -1,0 +1,21 @@
+.blockContact {
+    max-width: 500px;
+    margin: 120px auto 0 auto;
+    border: 1px solid gray;
+    padding: 40px 60px;
+}
+
+.blockContact__row {
+    display: flex;
+    margin-top: 16px;
+}
+
+.blockContact__rowLabel {
+    width: 50%;
+    margin-left: 25px;
+}
+
+.blockContact__rowValue {
+    width: 50%;
+    margin-left: -50px;
+}

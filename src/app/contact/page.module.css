@@ -1,1 +1,12 @@
-.page {}
+.page {
+    max-width: 900px;
+    margin: auto;
+    min-height: 600px;
+}
+
+.page__title {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
