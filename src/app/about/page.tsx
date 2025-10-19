@@ -9,7 +9,7 @@ const CTAButton: React.FC<{children: React.ReactNode;}> = ({children}) => (
 );
 
 const TEXT_AND_IMAGES_PROPS = {
-  image: '/pages/about/about.webp',
+  image: '/aleksandra-website/pages/about/about.webp',
   title: 'Aleksandra Borisova',
   paragraphs: [
     `The founder and head interior designer of the Utrecht-based design studio.`,
