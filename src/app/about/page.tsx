@@ -2,6 +2,7 @@ import { Text } from "@/ui/components/Text/Text";
 import styles from "./page.module.css";
 import { Button } from "@/ui/components/Button/Button";
 import { BlockTextAndImage } from "@/ui/blocks/BlockTextAndImage/BlockTextAndImage";
+import { Link } from "@/ui/components/Link/Link";
 
 const CTAButton: React.FC<{children: React.ReactNode;}> = ({children}) => (
   <Button className={styles.page__cta}>{children}</Button>
@@ -23,12 +24,12 @@ const TEXT_AND_IMAGES_PROPS = {
 export default function About() {
   return (
     <div className={styles.page}>
-      <Text variant='h1' className={styles.page__title}>About</Text>
+      <Text variant='h2' className={styles.page__title}>Aleksandra Borisova</Text>
       <main>
         <BlockTextAndImage 
           {...TEXT_AND_IMAGES_PROPS}
         />
-        <CTAButton>Get in touch</CTAButton>
+        <Link href='/contact'><CTAButton>Get in touch</CTAButton></Link>
       </main>
     </div>
   );

@@ -8,10 +8,6 @@
     flex-direction: column;
 }
 
-.blockTextAndImage__title {
-    margin-bottom: 24px;
-}
-
 .blockTextAndImage__paragraph {
     padding-bottom: 1.5em;
 }
