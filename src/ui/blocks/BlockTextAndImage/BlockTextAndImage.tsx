@@ -1,0 +1,30 @@
+import { Text } from "@/ui/components/Text/Text";
+import styles from './BlockTextAndImage.module.css';
+import Image from "next/image";
+
+type BlockTextAndImageProps = {
+  image: string;
+  title: string;
+  paragraphs: string[];
+};
+
+export const BlockTextAndImage: React.FC<BlockTextAndImageProps> = ({
+  image,
+  title,
+  paragraphs,
+}) => (
+  <div className={styles.blockTextAndImage}>
+    <div className={styles.blockTextAndImage__section}>
+      <Image src={image} alt="about" height={427} width={285} />
+    </div>
+    <div className={styles.blockTextAndImage__section}>
+      <Text variant='h2' className={styles.blockTextAndImage__title}>{title}</Text>
+
+      {
+        paragraphs.map((item, index) => (
+          <Text variant='body' className={styles.blockTextAndImage__paragraph} key={index}>{item}</Text>
+        ))
+      }
+    </div>
+  </div>
+);
