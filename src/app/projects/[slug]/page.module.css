@@ -1,0 +1,11 @@
+.page {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.page__title {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
