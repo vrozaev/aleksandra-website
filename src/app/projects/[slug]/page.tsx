@@ -23,7 +23,7 @@ export default async function ProjectPage({params}: {params: Promise<{slug: stri
     <div className={styles.page}>
       <Text variant='h2' className={styles.page__title}>{slug}</Text>
       <main>
-            <ProjectBlock project={PROJECT} />
+            <ProjectBlock {...PROJECT} />
       </main>
     </div>
   );
