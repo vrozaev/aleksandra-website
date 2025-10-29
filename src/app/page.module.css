@@ -1,1 +1,23 @@
-.page {}
+.page {
+
+}
+
+
+.page__mainBlock {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page__mainBlockTextWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page__lastetsProjectsTitle {
+    display: flex;
+    justify-content: center;
+}
