@@ -1,9 +1,11 @@
 .projectCard {
-    
+
 }
 
-.projectCard__image {
+.projectCard__imageWrapper {
+    height: 500px;
     width: 100%;
+    position: relative;
 }
 
 .projectCard__name {
