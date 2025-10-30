@@ -13,12 +13,17 @@ const TEXT_AND_IMAGES_PROPS = {
   image: '/aleksandra-website/pages/about/about.webp',
   title: 'Aleksandra Borisova',
   paragraphs: [
-    `The founder and head interior designer of the Utrecht-based design studio.`,
-    `I am dedicated to warm, elegant, and timeless designs, achieving a balance between functionality and aesthetics. 
-          As an interior designer, I work closely with my clients to design bespoke and authentic solutions that truly reflect their unique style and personality.`,
-    `Functionality and sustainability are at the core of our work. 
-          Our studio has broad knowledge and understanding of materials. 
-          We use tactile and natural materials such as stone, wood, and paint finishes to create unique and high-end design solutions.`,
+  `
+    My name is Alexandra — I’m the founder of interior design studio based in Utrecht, working across the Netherlands.
+  `,
+  `
+    My background is in architecture. Since 2016, I’ve been designing private homes and office buildings, and from 2019 to 2022 I also worked in landscape architecture, creating urban public spaces.
+      This blend of experiences helps me see each project as a whole — the home, its surroundings, and how they connect — allowing me to create spaces that feel natural, balanced, and truly lived in.
+  `,
+  `
+    In the Netherlands, I founded my studio to focus on thoughtful interiors and renovation projects.
+      I’m inspired by timeless design, craftsmanship, and the idea of sustainable living — and I’m happy to be part of this growing movement here.
+  `
   ],
 }
 
