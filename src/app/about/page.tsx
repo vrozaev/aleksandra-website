@@ -14,7 +14,7 @@ const TEXT_AND_IMAGES_PROPS = {
   title: 'Aleksandra Borisova',
   paragraphs: [
   `
-    My name is Alexandra — I’m the founder of interior design studio based in Utrecht, working across the Netherlands.
+    My name is Aleksandra — I’m the founder of interior design studio based in Utrecht, working across the Netherlands.
   `,
   `
     My background is in architecture. Since 2016, I’ve been designing private homes and office buildings, and from 2019 to 2022 I also worked in landscape architecture, creating urban public spaces.
