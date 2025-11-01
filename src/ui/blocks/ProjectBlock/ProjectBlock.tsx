@@ -2,15 +2,15 @@ import React from "react";
 import styles from './ProjectBlock.module.css';
 import { Text } from "@/ui/components/Text/Text";
 import Image, { StaticImageData } from "next/image";
+import { ProjectType } from "@/shared/projects";
 
 type ProjectBlockProps = {
-    images: StaticImageData[];
-    name: string;
-    details: string;
-    description: string[];
+    project: ProjectType;
 };
 
-export const ProjectBlock: React.FC<ProjectBlockProps> = ({images, name, details, description}) => {
+export const ProjectBlock: React.FC<ProjectBlockProps> = ({project}) => {
+    const {images, name, details, description} = project;
+
     return (
         <div className={styles.projectBlock}>
             <div>
