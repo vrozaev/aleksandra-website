@@ -1,3 +1,10 @@
 .projectBlock {
-    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 999px) {
+    .projectBlock {
+        flex-direction: column-reverse;
+    }
 }
