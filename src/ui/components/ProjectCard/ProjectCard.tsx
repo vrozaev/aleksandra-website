@@ -18,7 +18,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({project, className}) =>
         <Link href={href}>
             <div className={cc(styles.projectCard, className)}>
                 <div className={styles.projectCard__imageWrapper}>
-                    <Image className={styles.projectCard__image} src={project.images[0]} fill objectFit='fit' alt="" />
+                    <Image className={styles.projectCard__image} src={project.images[0]} alt='' fill objectFit='cover' />
                 </div>
                 <Text className={styles.projectCard__name} variant="body">{project.name}</Text>
             </div>

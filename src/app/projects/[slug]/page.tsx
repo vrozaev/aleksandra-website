@@ -1,4 +1,3 @@
-import { Text } from "@/ui/components/Text/Text";
 import styles from "./page.module.css";
 import { ProjectBlock } from "@/ui/blocks/ProjectBlock/ProjectBlock";
 import { PROJECTS_LIST } from "@/shared/projects";
@@ -14,7 +13,6 @@ export default async function ProjectPage({params}: {params: Promise<{slug: stri
 
   return (
     <div className={styles.page}>
-      <Text variant='h2' className={styles.page__title}>{slug}</Text>
       <main>
             <ProjectBlock project={project} />
       </main>

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './ProjectBlock.module.css';
 import { Text } from "@/ui/components/Text/Text";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { ProjectType } from "@/shared/projects";
 
 type ProjectBlockProps = {
@@ -13,21 +13,23 @@ export const ProjectBlock: React.FC<ProjectBlockProps> = ({project}) => {
 
     return (
         <div className={styles.projectBlock}>
-            <div>
-                    {
-                        images.map((item, index) => (
-                            <Image src={item} key={index} alt='' />
-                        ))
-                    }
-            </div>
-            <div>
-                <Text variant="body" className={styles.projectBlock__name}>{name}</Text>
-                <Text variant="body" className={styles.projectBlock__details}>{details}</Text>
+            <div className={styles.projectBlock__infoWrapper}>
+                <Text variant="h1" className={styles.projectBlock__name}>{name}</Text>
+                <Text variant="h2" className={styles.projectBlock__details}>{details}</Text>
                 {
                     description.map((item, index) => (
                         <Text variant="body" key={index} className={styles.projectBlock__description}>{item}</Text>
                     ))
                 }
+            </div>
+            <div className={styles.projectBlock__photosWrapper}>
+                    {
+                        images.map((item, index) => (
+                            <div className={styles.projectBlock__photo} key={index}>
+                                <Image src={item} alt='' fill objectFit='cover' />
+                            </div>
+                        ))
+                    }
             </div>
         </div>
     )
