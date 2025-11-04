@@ -1,10 +1,10 @@
 import React from "react";
 import styles from './BlockProjects.module.css';
 import { ProjectCard } from "@/ui/components/ProjectCard/ProjectCard";
-import type { StaticImageData } from "next/image";
+import { ProjectType } from "@/shared/projects";
 
 type BlockProjectsProps = {
-    projects: {name: string; image: StaticImageData; href: string;}[];
+    projects: ProjectType[];
 };
 
 export const BlockProjects: React.FC<BlockProjectsProps> = ({projects}) => {
@@ -13,7 +13,7 @@ export const BlockProjects: React.FC<BlockProjectsProps> = ({projects}) => {
             {
                 projects.map((project, index) => {
                     return (
-                        <ProjectCard {...project} className={styles.blockProjects__project} key={index} />
+                        <ProjectCard project={project} className={styles.blockProjects__project} key={index} />
                     );
                 })
             }

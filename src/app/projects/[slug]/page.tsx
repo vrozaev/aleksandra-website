@@ -1,29 +1,20 @@
-import { Text } from "@/ui/components/Text/Text";
 import styles from "./page.module.css";
 import { ProjectBlock } from "@/ui/blocks/ProjectBlock/ProjectBlock";
-import type { ComponentProps } from "react";
+import { PROJECTS_LIST } from "@/shared/projects";
 
 export async function generateStaticParams() {
-    return [
-        { slug: 'project-1' },
-    ];
+  return PROJECTS_LIST.map(({slug}) => ({slug}));
 }
-
-const PROJECT: ComponentProps<typeof ProjectBlock> = {
-    images: [],
-    name: '',
-    details: '', 
-    description: [],
-};
 
 export default async function ProjectPage({params}: {params: Promise<{slug: string}>}) {
   const {slug} = await params;
 
+  const project = PROJECTS_LIST.find((project) => project.slug === slug)!;
+
   return (
     <div className={styles.page}>
-      <Text variant='h2' className={styles.page__title}>{slug}</Text>
       <main>
-            <ProjectBlock {...PROJECT} />
+            <ProjectBlock project={project} />
       </main>
     </div>
   );

@@ -1,3 +1,46 @@
 .projectBlock {
-    height: 100vh;
+    --card-width: 400px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
+
+.projectBlock__infoWrapper {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectBlock__name {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.projectBlock__details {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.projectBlock__description {
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+.projectBlock__photosWrapper {
+    max-width: 1300px;
+    margin: 40px auto 0 auto;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-width), 1fr));
+}
+
+.projectBlock__photo {
+    width: var(--card-width);
+    height: 600px;
+    margin: auto;
+    position: relative;
 }
