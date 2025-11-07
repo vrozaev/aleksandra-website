@@ -3,6 +3,7 @@ import "./globals.css";
 import { Footer } from "@/ui/components/Footer/Footer";
 import { Navigation } from "@/ui/components/Navigation/Navigation";
 import { Raleway } from 'next/font/google'
+import { Content } from "@/ui/components/Content/Content";
  
 const raleway = Raleway({
   subsets: ['latin', 'cyrillic'],
@@ -22,7 +23,9 @@ export default function RootLayout({
     <html lang="en" className={raleway.className}>
       <body>
         <Navigation />
-        {children}
+        <Content>
+          {children}
+        </Content>
         <Footer />
       </body>
     </html>

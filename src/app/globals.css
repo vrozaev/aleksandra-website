@@ -1,6 +1,10 @@
 :root {
   --background: #f5f0ea;
   --foreground: #171717;
+
+  --navigation-height: 70px;
+  --footer-height: 60px;
+  --content-height: calc(100vh - var(--navigation-height) - var(--footer-height));
 }
 
 html,
