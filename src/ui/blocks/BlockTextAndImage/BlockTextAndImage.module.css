@@ -1,13 +1,31 @@
 .blockTextAndImage {
     display: flex;
+    gap: 40px;
 }
 
 .blockTextAndImage__section {
-    padding: 0 15px;
     display: flex;
     flex-direction: column;
 }
 
 .blockTextAndImage__paragraph {
     padding-bottom: 1.5em;
+}
+
+.blockTextAndImage__imageWrapper {
+    position: relative;
+    height: 427px;
+    width: 285px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 999px) {
+    .blockTextAndImage {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .blockTextAndImage__imageWrapper {
+        min-height: 928px;
+        width: 100%;
+    }
 }

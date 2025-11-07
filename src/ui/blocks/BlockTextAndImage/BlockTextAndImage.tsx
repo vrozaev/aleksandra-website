@@ -4,18 +4,18 @@ import Image from "next/image";
 
 type BlockTextAndImageProps = {
   image: string;
-  title: string;
   paragraphs: string[];
 };
 
 export const BlockTextAndImage: React.FC<BlockTextAndImageProps> = ({
   image,
-  title,
   paragraphs,
 }) => (
   <div className={styles.blockTextAndImage}>
     <div className={styles.blockTextAndImage__section}>
-      <Image src={image} alt="about" height={427} width={285} />
+      <div className={styles.blockTextAndImage__imageWrapper}>
+        <Image src={image} alt="about" fill objectFit="cover" />
+      </div>
     </div>
     <div className={styles.blockTextAndImage__section}>
       {
