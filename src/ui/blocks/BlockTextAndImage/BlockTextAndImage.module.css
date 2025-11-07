@@ -25,7 +25,6 @@
     }
 
     .blockTextAndImage__imageWrapper {
-        min-height: 928px;
         width: 100%;
     }
 }
