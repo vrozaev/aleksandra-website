@@ -5,6 +5,12 @@
     padding: 40px 60px;
 }
 
+@media only screen and (min-width: 1px) and (max-width: 999px) {
+    .blockContact {
+        padding: 40px 40px;
+    }
+}
+
 .blockContact__row {
     display: flex;
     margin-top: 20px;
