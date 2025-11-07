@@ -7,15 +7,7 @@
 
 .blockContact__row {
     display: flex;
-    margin-top: 16px;
-}
-
-.blockContact__rowLabel {
-    width: 50%;
-    margin-left: 25px;
-}
-
-.blockContact__rowValue {
-    width: 50%;
-    margin-left: -50px;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
