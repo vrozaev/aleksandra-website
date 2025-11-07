@@ -1,8 +1,9 @@
 import React from "react";
 import styles from './ProjectBlock.module.css';
 import { Text } from "@/ui/components/Text/Text";
-import Image from "next/image";
 import { ProjectType } from "@/shared/projects";
+import { ProjectCard } from "@/ui/components/ProjectCard/ProjectCard";
+import { ProjectCardWrapper } from "@/ui/components/ProjectCardWrapper/ProjectCardWrapper";
 
 type ProjectBlockProps = {
     project: ProjectType;
@@ -22,15 +23,14 @@ export const ProjectBlock: React.FC<ProjectBlockProps> = ({project}) => {
                     ))
                 }
             </div>
-            <div className={styles.projectBlock__photosWrapper}>
-                    {
-                        images.map((item, index) => (
-                            <div className={styles.projectBlock__photo} key={index}>
-                                <Image src={item} alt='' fill objectFit='cover' />
-                            </div>
-                        ))
-                    }
-            </div>
+            
+            <ProjectCardWrapper>
+                {
+                    images.map((image, index) => (
+                        <ProjectCard image={image} key={index} />
+                    ))
+                }
+            </ProjectCardWrapper>
         </div>
     )
 };
