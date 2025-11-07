@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div className={styles.page}>
       <Spacer size="m" />
-      <Text variant='h2' className={styles.page__title}>Let's get in touch</Text>
+      <Text variant='h2' className={styles.page__title}>Contact</Text>
       <main>
         <BlockContact />
       </main>
