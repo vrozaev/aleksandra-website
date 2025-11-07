@@ -31,7 +31,7 @@ export default function About() {
   return (
     <div className={styles.page}>
       <Spacer size="m" />
-      <Text variant='h2' className={styles.page__title}>Aleksandra Borisova</Text>
+      <Text variant='h2' className={styles.page__title}>About</Text>
       <Spacer size="m" />
       <main>
         <BlockTextAndImage 

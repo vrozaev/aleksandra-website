@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './BlockProjects.module.css';
 import { ProjectCard } from "@/ui/components/ProjectCard/ProjectCard";
 import { ProjectType } from "@/shared/projects";
+import { ProjectCardWrapper } from "@/ui/components/ProjectCardWrapper/ProjectCardWrapper";
 
 type BlockProjectsProps = {
     projects: ProjectType[];
@@ -9,14 +9,19 @@ type BlockProjectsProps = {
 
 export const BlockProjects: React.FC<BlockProjectsProps> = ({projects}) => {
     return (
-        <div className={styles.blockProjects}>
+        <ProjectCardWrapper>
             {
                 projects.map((project, index) => {
                     return (
-                        <ProjectCard project={project} className={styles.blockProjects__project} key={index} />
+                        <ProjectCard 
+                            href={`/projects/${project.slug}`}
+                            name={project.name}
+                            image={project.images[0]}
+                            key={index} 
+                        />
                     );
                 })
             }
-        </div>
+        </ProjectCardWrapper>
     );
 }
