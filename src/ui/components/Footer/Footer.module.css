@@ -1,29 +1,12 @@
 .footer {
     display: flex;
+    height: var(--footer-height);
     flex-direction: column;
+    justify-content: center;
     width: 100%;
-    padding: 50px 0;
     border-top: 1px solid gray;
 }
 
-.footer__columnsWrapper {
-    display: flex;
-    width: 100%;
-}
-
-.footer__column {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 0 25px;
-}
-
-.footer__columnTitle {
-    text-transform: uppercase;
-}
-
 .footer__copyright {
-    margin-top: 50px;
     text-align: center;
 }
