@@ -23,7 +23,7 @@ export default function Services() {
   return (
     <div className={styles.page}>
       <Spacer size="m" />
-      <Text variant='h2' className={styles.page__title}>OUR SERVICES</Text>
+      <Text variant='h2' className={styles.page__title}>SERVICES</Text>
       <Spacer size="m" />
       <main>
         <BlockTextAndImage 
