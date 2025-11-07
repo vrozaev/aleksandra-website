@@ -4,10 +4,11 @@
 
 
 .page__mainBlock {
-    height: 75vh;
+    height: calc(100vh - 70px);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid gray;
 }
 
 .page__mainBlockTextWrapper {
@@ -15,6 +16,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
+    gap: 60px;
 }
 
 .page__lastetsProjectsTitle {

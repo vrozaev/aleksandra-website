@@ -11,7 +11,7 @@ export default function Home() {
         <div className={styles.page__mainBlock}>
           <div className={styles.page__mainBlockTextWrapper}>
             <Text variant="h1">Aleksandra Borisova Studio</Text>
-            <Text variant="h2">Interior design, renovation, supervision</Text>
+            <Text variant="h2">Interior design, supervision</Text>
           </div>
         </div>
         <Spacer size='m' />
