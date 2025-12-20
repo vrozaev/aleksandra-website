@@ -1,14 +1,14 @@
-.projectCard {
+.project-card {
     width: 350px;
 }
 
-.projectCard__imageWrapper {
+.project-card__image-wrapper {
     height: 500px;
     width: 100%;
     position: relative;
 }
 
-.projectCard__name {
+.project-card__name {
     margin-top: 25px;
     display: flex;
     justify-content: center;

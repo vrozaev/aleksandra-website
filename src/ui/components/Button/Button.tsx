@@ -11,7 +11,7 @@ type ButtonProps = {
 
 export const Button: React.FC<ButtonProps> = ({children, href, className}) => {
     const jsx = (
-        <button className={cc(styles.button, styles.button_view_cta, className)}>{children}</button>
+        <button className={cc(styles['button'], styles['button_view_cta'], className)}>{children}</button>
     );
 
     if (href) {

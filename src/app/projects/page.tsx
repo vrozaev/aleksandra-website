@@ -6,9 +6,9 @@ import { Spacer } from "@/ui/components/Spacer/Spacer";
 
 export default function Projects() {
   return (
-    <div className={styles.page}>
+    <div className={styles['page']}>
       <Spacer size="m" />
-      <Text variant='h2' className={styles.page__title}>Projects</Text>
+      <Text variant='h2' className={styles['page__title']}>Projects</Text>
       <Spacer size="m" />
       <main>
         <BlockProjects projects={PROJECTS_LIST} />

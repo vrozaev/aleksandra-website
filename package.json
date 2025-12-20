@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "prebuild": "node scripts/generate-images-list.js",
+    "dev": "npm run genereate-images-list && next dev",
+    "prebuild": "npm run genereate-images-list",
     "build": "next build",
-    "start": "node scripts/generate-images-list.js && next start"
+    "start": "npm run genereate-images-list && next start",
+    "genereate-images-list": "node scripts/generate-images-list.js"
   },
   "dependencies": {
     "react": "19.1.0",

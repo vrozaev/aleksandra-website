@@ -7,7 +7,7 @@ type Props = {
 
 export const ProjectCardWrapper: React.FC<Props> = ({children}) => {
     return (
-        <div className={styles.ProjectCardWrapper}>
+        <div className={styles['project-card-wrapper']}>
             {children}
         </div>
     );
