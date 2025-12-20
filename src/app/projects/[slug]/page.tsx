@@ -1,4 +1,4 @@
-import { ProjectBlock } from "@/ui/blocks/ProjectBlock/ProjectBlock";
+import { BlockProject } from "@/ui/blocks/BlockProject/BlockProject";
 import { PROJECTS_LIST } from "@/shared/projects";
 import { Page } from "@/ui/components/Page/Page";
 
@@ -13,7 +13,7 @@ export default async function ProjectPage({params}: {params: Promise<{slug: stri
 
   return (
     <Page maxWidth="l">
-      <ProjectBlock project={project} />
+      <BlockProject project={project} />
     </Page>
   );
 }

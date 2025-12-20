@@ -1,5 +1,5 @@
 import { Text } from "@/ui/components/Text/Text";
-import { BlockProjects } from "@/ui/blocks/BlockProjects/BlockProjects";
+import { BlockProjectsList } from "@/ui/blocks/BlockProjectsList/BlockProjectsList";
 import { PROJECTS_LIST } from "@/shared/projects";
 import { Spacer } from "@/ui/components/Spacer/Spacer";
 import { Page } from "@/ui/components/Page/Page";
@@ -17,7 +17,7 @@ export default function Home() {
         <Spacer size='m' />
         <Text variant='h2' className={styles['page__lastets-projects-title']}>Latest Projects</Text>
         <Spacer size='m' />
-        <BlockProjects projects={PROJECTS_LIST} />
+        <BlockProjectsList projects={PROJECTS_LIST} />
     </Page>
   );
 }
