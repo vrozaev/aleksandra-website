@@ -1,4 +1,4 @@
-.project-block {
+.block-project {
     --card-width: 400px;
 
     display: flex;
@@ -6,25 +6,25 @@
     flex-direction: column;
 }
 
-.project-block__info-wrapper {
+.block-project__info-wrapper {
     max-width: 1200px;
     margin: auto;
     display: flex;
     flex-direction: column;
 }
 
-.project-block__name {
+.block-project__name {
     margin-top: 20px;
     text-align: center;
 }
 
-.project-block__details {
+.block-project__details {
     margin-top: 20px;
     margin-bottom: 50px;
     text-align: center;
 }
 
-.project-block__description {
+.block-project__description {
     text-align: center;
     padding-bottom: 1.5em;
 }

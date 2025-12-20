@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { ProjectBlock } from "@/ui/blocks/ProjectBlock/ProjectBlock";
+import { BlockProject } from "@/ui/blocks/BlockProject/BlockProject";
 import { PROJECTS_LIST } from "@/shared/projects";
 
 export async function generateStaticParams() {
@@ -14,7 +14,7 @@ export default async function ProjectPage({params}: {params: Promise<{slug: stri
   return (
     <div className={styles['page']}>
       <main>
-            <ProjectBlock project={project} />
+            <BlockProject project={project} />
       </main>
     </div>
   );

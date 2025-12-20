@@ -1,15 +1,15 @@
 import React from "react";
-import styles from './ProjectBlock.module.css';
+import styles from './BlockProject.module.css';
 import { Text } from "@/ui/components/Text/Text";
 import { ProjectType } from "@/shared/projects";
 import { ProjectCard } from "@/ui/components/ProjectCard/ProjectCard";
 import { ProjectCardWrapper } from "@/ui/components/ProjectCardWrapper/ProjectCardWrapper";
 
-type ProjectBlockProps = {
+type BlockProjectProps = {
     project: ProjectType;
 };
 
-export const ProjectBlock: React.FC<ProjectBlockProps> = ({project}) => {
+export const BlockProject: React.FC<BlockProjectProps> = ({project}) => {
     const {images, name, details, description} = project;
 
     return (
