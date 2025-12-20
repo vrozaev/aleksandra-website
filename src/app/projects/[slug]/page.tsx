@@ -1,6 +1,6 @@
-import styles from "./page.module.css";
 import { ProjectBlock } from "@/ui/blocks/ProjectBlock/ProjectBlock";
 import { PROJECTS_LIST } from "@/shared/projects";
+import { Page } from "@/ui/components/Page/Page";
 
 export async function generateStaticParams() {
   return PROJECTS_LIST.map(({slug}) => ({slug}));
@@ -12,10 +12,8 @@ export default async function ProjectPage({params}: {params: Promise<{slug: stri
   const project = PROJECTS_LIST.find((project) => project.slug === slug)!;
 
   return (
-    <div className={styles['page']}>
-      <main>
-            <ProjectBlock project={project} />
-      </main>
-    </div>
+    <Page maxWidth="l">
+      <ProjectBlock project={project} />
+    </Page>
   );
 }
