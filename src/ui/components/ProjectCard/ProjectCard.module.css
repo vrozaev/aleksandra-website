@@ -2,6 +2,10 @@
     width: 350px;
 }
 
+.project-card_clickable {
+    cursor: pointer;
+}
+
 .project-card__image-wrapper {
     height: 500px;
     width: 100%;

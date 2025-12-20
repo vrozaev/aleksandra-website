@@ -5,12 +5,13 @@ import { cc } from "../utils/cc";
 type CrossIconProps = {
     onClick?: () => void;
     className?: string;
+    fill?: string;
 };
 
-export const CrossIcon: React.FC<CrossIconProps> = ({onClick, className}) => {
+export const CrossIcon: React.FC<CrossIconProps> = ({onClick, className, fill='#000000'}) => {
     return (
         <svg 
-            fill="#000000" 
+            fill={fill}
             width="30px" 
             height="30px" 
             viewBox="0 0 16 16" 

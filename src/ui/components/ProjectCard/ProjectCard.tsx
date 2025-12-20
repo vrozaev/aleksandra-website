@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import { Text } from "../Text/Text";
 import styles from './ProjectCard.module.css';
@@ -9,11 +10,24 @@ type ProjectCardProps = {
     href?: string;
     name?: string;
     image: string;
+    onClick?: () => void;
 };
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({href, name, image}) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({href, name, image, onClick}) => {
+    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+        if (!onClick) return;
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            onClick();
+        }
+    };
+
     const content = (
-        <div className={cc(styles['project-card'])}>
+        <div
+            className={cc(styles['project-card'], onClick ? styles['project-card_clickable'] : '' )}
+            onClick={onClick}
+            onKeyDown={handleKeyDown}
+        >
             <div className={styles['project-card__image-wrapper']}>
                 <Image className={styles['project-card__image']} src={image} alt='' fill objectFit='cover' />
             </div>
