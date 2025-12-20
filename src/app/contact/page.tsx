@@ -1,16 +1,10 @@
-import { Text } from "@/ui/components/Text/Text";
-import styles from "./page.module.css";
 import { BlockContact } from "@/ui/blocks/BlockContact/BlockContact";
-import { Spacer } from "@/ui/components/Spacer/Spacer";
+import { Page } from "@/ui/components/Page/Page";
 
 export default function Contact() {
   return (
-    <div className={styles['page']}>
-      <Spacer size="m" />
-      <Text variant='h2' className={styles['page__title']}>Contact</Text>
-      <main>
+    <Page title="Contact" maxWidth="l">
         <BlockContact />
-      </main>
-    </div>
+    </Page>
   );
 }

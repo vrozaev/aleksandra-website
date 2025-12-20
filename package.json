@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "npm run genereate-images-list && next dev",
-    "prebuild": "npm run genereate-images-list",
+    "dev": "next dev",
+    "predev": "npm run generate-images-list",
+    "prebuild": "npm run generate-images-list",
     "build": "next build",
-    "start": "npm run genereate-images-list && next start",
-    "genereate-images-list": "node scripts/generate-images-list.js"
+    "start": "next start",
+    "prestart": "npm run generate-images-list",
+    "generate-images-list": "node scripts/generate-images-list.js"
   },
   "dependencies": {
     "react": "19.1.0",
@@ -15,9 +17,9 @@
     "next": "15.5.4"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "typescript": "5.9.2",
+    "@types/node": "20.19.17",
+    "@types/react": "19.1.15",
+    "@types/react-dom": "19.1.9"
   }
 }
