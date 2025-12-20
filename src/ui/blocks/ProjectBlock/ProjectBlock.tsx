@@ -1,9 +1,11 @@
-import React from "react";
+'use client';
+import React, { useCallback, useState } from "react";
 import styles from './ProjectBlock.module.css';
 import { Text } from "@/ui/components/Text/Text";
 import { ProjectType } from "@/shared/projects";
 import { ProjectCard } from "@/ui/components/ProjectCard/ProjectCard";
 import { ProjectCardWrapper } from "@/ui/components/ProjectCardWrapper/ProjectCardWrapper";
+import { Gallery } from "@/ui/components/Gallery/Gallery";
 
 type ProjectBlockProps = {
     project: ProjectType;
@@ -11,6 +13,10 @@ type ProjectBlockProps = {
 
 export const ProjectBlock: React.FC<ProjectBlockProps> = ({project}) => {
     const {images, name, details, description} = project;
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+    const openGallery = useCallback((index: number) => () => setActiveIndex(index), []);
+    const closeGallery = useCallback(() => setActiveIndex(null), []);
 
     return (
         <div className={styles['project-block']}>
@@ -27,10 +33,14 @@ export const ProjectBlock: React.FC<ProjectBlockProps> = ({project}) => {
             <ProjectCardWrapper>
                 {
                     images.map((image, index) => (
-                        <ProjectCard image={image} key={index} />
+                        <ProjectCard image={image} key={index} onClick={openGallery(index)} />
                     ))
                 }
             </ProjectCardWrapper>
+
+            {activeIndex !== null ? (
+                <Gallery images={images} startIndex={activeIndex} onClose={closeGallery} />
+            ) : null}
         </div>
     )
 };
