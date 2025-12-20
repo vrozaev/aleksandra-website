@@ -9,25 +9,18 @@ type ProjectCardProps = {
     href?: string;
     name?: string;
     image: string;
+    onClick?: () => void;
 };
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({href, name, image}) => {
-    const content = (
-        <div className={cc(styles['project-card'])}>
-            <div className={styles['project-card__image-wrapper']}>
-                <Image className={styles['project-card__image']} src={image} alt='' fill objectFit='cover' />
-            </div>
-            { name ? <Text className={styles['project-card__name']} variant="body">{name}</Text> : null }
-        </div>
-    );
-
-    if (!href) {
-        return content
-    }
-
+export const ProjectCard: React.FC<ProjectCardProps> = ({href, name, image, onClick}) => {
     return (
-        <Link href={href}>
-            {content}
+        <Link href={href || image}>
+            <div className={cc(styles['project-card'])} onClick={onClick}>
+                <div className={styles['project-card__image-wrapper']}>
+                    <Image className={styles['project-card__image']} src={image} alt='' fill objectFit='cover' />
+                </div>
+                { name ? <Text className={styles['project-card__name']} variant="body">{name}</Text> : null }
+            </div>
         </Link>
     );
 };

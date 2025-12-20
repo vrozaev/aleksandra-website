@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import styles from './BlockProject.module.css';
 import { Text } from "@/ui/components/Text/Text";
@@ -11,6 +12,10 @@ type BlockProjectProps = {
 
 export const BlockProject: React.FC<BlockProjectProps> = ({project}) => {
     const {images, name, details, description} = project;
+
+    const handleOpen = (imageUrl: string) => () => {
+        window.open(imageUrl, '_blank', 'noopener,noreferrer');
+    };
 
     return (
         <div className={styles['block-project']}>
@@ -27,7 +32,7 @@ export const BlockProject: React.FC<BlockProjectProps> = ({project}) => {
             <ProjectCardWrapper>
                 {
                     images.map((image, index) => (
-                        <ProjectCard image={image} key={index} />
+                        <ProjectCard image={image} key={index} onClick={handleOpen(image)} />
                     ))
                 }
             </ProjectCardWrapper>
