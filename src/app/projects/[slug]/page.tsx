@@ -12,7 +12,7 @@ export default async function ProjectPage({params}: {params: Promise<{slug: stri
   const project = PROJECTS_LIST.find((project) => project.slug === slug)!;
 
   return (
-    <div className={styles.page}>
+    <div className={styles['page']}>
       <main>
             <ProjectBlock project={project} />
       </main>

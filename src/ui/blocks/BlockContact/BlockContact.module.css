@@ -1,4 +1,4 @@
-.blockContact {
+.block-contact {
     max-width: 500px;
     margin: 120px auto 0 auto;
     border: 1px solid gray;
@@ -6,12 +6,12 @@
 }
 
 @media only screen and (min-width: 1px) and (max-width: 999px) {
-    .blockContact {
+    .block-contact {
         padding: 40px 40px;
     }
 }
 
-.blockContact__row {
+.block-contact__row {
     display: flex;
     margin-top: 20px;
     justify-content: space-between;

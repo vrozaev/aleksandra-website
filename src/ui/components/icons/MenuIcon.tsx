@@ -11,7 +11,7 @@ type MenuIconProps = {
 export const MenuIcon: React.FC<MenuIconProps> = ({onClick, className}) => {
     return (
         <svg 
-            className={cc(styles.icon, className)}
+            className={cc(styles['icon'], className)}
             onClick={onClick}
             fill="#000000" 
             width="30px" 

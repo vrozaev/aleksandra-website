@@ -6,7 +6,7 @@ import { Link } from "@/ui/components/Link/Link";
 import { Spacer } from "@/ui/components/Spacer/Spacer";
 
 const CTAButton: React.FC<{children: React.ReactNode;}> = ({children}) => (
-  <Button className={styles.page__cta}>{children}</Button>
+  <Button className={styles['page__cta']}>{children}</Button>
 );
 
 const TEXT_AND_IMAGES_PROPS = {
@@ -29,9 +29,9 @@ const TEXT_AND_IMAGES_PROPS = {
 
 export default function About() {
   return (
-    <div className={styles.page}>
+    <div className={styles['page']}>
       <Spacer size="m" />
-      <Text variant='h2' className={styles.page__title}>About</Text>
+      <Text variant='h2' className={styles['page__title']}>About</Text>
       <Spacer size="m" />
       <main>
         <BlockTextAndImage 

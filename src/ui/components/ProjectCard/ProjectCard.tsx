@@ -13,11 +13,11 @@ type ProjectCardProps = {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({href, name, image}) => {
     const content = (
-        <div className={cc(styles.projectCard)}>
-            <div className={styles.projectCard__imageWrapper}>
-                <Image className={styles.projectCard__image} src={image} alt='' fill objectFit='cover' />
+        <div className={cc(styles['project-card'])}>
+            <div className={styles['project-card__image-wrapper']}>
+                <Image className={styles['project-card__image']} src={image} alt='' fill objectFit='cover' />
             </div>
-            { name ? <Text className={styles.projectCard__name} variant="body">{name}</Text> : null }
+            { name ? <Text className={styles['project-card__name']} variant="body">{name}</Text> : null }
         </div>
     );
 

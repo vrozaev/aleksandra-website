@@ -10,7 +10,7 @@
     padding: 0 15px;
 }
 
-.navigation__mobileLink {
+.navigation__mobile-link {
     text-transform: uppercase;
     padding: 0 15px;
     font-size: 40px;
@@ -46,7 +46,7 @@
     background: var(--background);
 }
 
-.navigation__mobileModal {
+.navigation__mobile-modal {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -63,7 +63,7 @@
     z-index: 1;
 }
 
-.navigation__ctaIcon {
+.navigation__cta-icon {
     z-index: 1;
 }
 

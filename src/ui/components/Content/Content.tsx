@@ -7,7 +7,7 @@ type Props = {
 
 export const Content: React.FC<Props> = ({children}) => {
     return (
-        <div className={styles.Content}>
+        <div className={styles['content']}>
             {children}
         </div>
     );

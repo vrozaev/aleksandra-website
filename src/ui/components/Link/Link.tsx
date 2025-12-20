@@ -7,6 +7,6 @@ type LinkProps = ComponentProps<typeof NextLink> & {view?: 'footer'};
 
 export const Link: React.FC<LinkProps> = ({className, view, ...rest}) => {
     return (
-         <NextLink className={cc(styles.link, className, view === 'footer' && styles.link_footer)} {...rest} />
+         <NextLink className={cc(styles['link'], className, view === 'footer' && styles['link_footer'])} {...rest} />
     );
 }

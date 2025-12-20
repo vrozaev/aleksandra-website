@@ -11,16 +11,16 @@ export const BlockTextAndImage: React.FC<BlockTextAndImageProps> = ({
   image,
   paragraphs,
 }) => (
-  <div className={styles.blockTextAndImage}>
-    <div className={styles.blockTextAndImage__section}>
-      <div className={styles.blockTextAndImage__imageWrapper}>
+  <div className={styles['block-text-and-image']}>
+    <div className={styles['block-text-and-image__section']}>
+      <div className={styles['block-text-and-image__image-wrapper']}>
         <Image src={image} alt="about" fill objectFit="cover" />
       </div>
     </div>
-    <div className={styles.blockTextAndImage__section}>
+    <div className={styles['block-text-and-image__section']}>
       {
         paragraphs.map((item, index) => (
-          <Text variant='body' className={styles.blockTextAndImage__paragraph} key={index}>{item}</Text>
+          <Text variant='body' className={styles['block-text-and-image__paragraph']} key={index}>{item}</Text>
         ))
       }
     </div>
