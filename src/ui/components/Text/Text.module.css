@@ -1,5 +1,5 @@
 .h1 {
-    font-family: Raleway;
+    font-family: var(--font-heading);
     letter-spacing: 5px;
     font-size: 40px;
     line-height: 68px;
@@ -7,7 +7,7 @@
 }
 
 .h2 {
-    font-family: Raleway;
+    font-family: var(--font-heading);
     letter-spacing: 5px;
     font-size: 28px;
     line-height: 48px;
@@ -15,7 +15,7 @@
 }
 
 .body {
-    font-family: Raleway;
+    font-family: var(--font-body);
     letter-spacing: 1px;
     font-size: 16px;
     line-height: 32px;

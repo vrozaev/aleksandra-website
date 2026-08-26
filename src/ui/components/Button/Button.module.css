@@ -1,6 +1,7 @@
 .button {
     cursor: pointer;
     color: var(--foreground);
+    font-family: var(--font-heading);
     transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 

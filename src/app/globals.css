@@ -10,6 +10,8 @@
   --foreground: var(--color-graphite);
   --accent: var(--color-red);
   --border-color: var(--color-gray);
+  --font-heading: var(--font-alata), Arial, Helvetica, sans-serif;
+  --font-body: var(--font-source-code-pro), "Courier New", monospace;
 
   --navigation-height: 70px;
   --footer-height: 60px;
@@ -30,7 +32,7 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
