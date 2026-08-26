@@ -8,7 +8,7 @@ type CrossIconProps = {
     fill?: string;
 };
 
-export const CrossIcon: React.FC<CrossIconProps> = ({onClick, className, fill='#000000'}) => {
+export const CrossIcon: React.FC<CrossIconProps> = ({onClick, className, fill='currentColor'}) => {
     return (
         <svg 
             fill={fill}

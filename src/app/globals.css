@@ -1,6 +1,17 @@
 :root {
-  --background: #f5f0ea;
-  --foreground: #171717;
+  /* Formae Bureau brand palette */
+  --color-graphite: #252525;
+  --color-red: #f00000;
+  --color-gray: #b3b3b3;
+  --color-off-white: #f2f2f2;
+  --color-white: #ffffff;
+
+  --background: var(--color-off-white);
+  --foreground: var(--color-graphite);
+  --accent: var(--color-red);
+  --border-color: var(--color-gray);
+  --font-heading: var(--font-alata), Arial, Helvetica, sans-serif;
+  --font-body: var(--font-source-code-pro), "Courier New", monospace;
 
   --navigation-height: 70px;
   --footer-height: 60px;
@@ -13,10 +24,15 @@ body {
   overflow-x: hidden;
 }
 
+::selection {
+  color: var(--color-white);
+  background: var(--accent);
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

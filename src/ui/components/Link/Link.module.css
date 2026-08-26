@@ -1,8 +1,8 @@
 
 .link:hover {
-    color: #c1a191;
+    color: var(--accent);
 }
 
 .link_footer {
-    color: #c1a191;
+    color: var(--accent);
 }
