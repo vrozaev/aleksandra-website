@@ -9,7 +9,8 @@
     "build": "next build",
     "start": "next start",
     "prestart": "npm run generate-images-list",
-    "generate-images-list": "node scripts/generate-images-list.js"
+    "generate-images-list": "node scripts/generate-images-list.js",
+    "optimize-images": "node scripts/optimize-images.js && npm run generate-images-list"
   },
   "dependencies": {
     "react": "19.1.0",
@@ -17,6 +18,7 @@
     "next": "15.5.4"
   },
   "devDependencies": {
+    "sharp": "0.34.4",
     "typescript": "5.9.2",
     "@types/node": "20.19.17",
     "@types/react": "19.1.15",

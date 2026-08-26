@@ -1,4 +1,15 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aleksandra Borisova Studio
+
+## Preparing images
+
+Put source images anywhere under `public`, then run:
+
+```bash
+npm run optimize-images
+```
+
+The command recursively converts JPEG, PNG, TIFF, AVIF, HEIC, and HEIF files to WebP, limits the longest side to 2400 px, normalizes colors to sRGB, and removes embedded metadata. A source file is deleted only after its optimized WebP has been written successfully.
+SVG and animated GIF files are intentionally left unchanged. The command also refreshes generated project gallery lists after optimization.
 
 ## Getting Started
 

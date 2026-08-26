@@ -42,3 +42,6 @@ next-env.d.ts
 
 # scripts/generate-images-list.js
 images.json
+
+# codex
+input_data
