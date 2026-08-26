@@ -19,7 +19,7 @@ const sourceCodePro = Source_Code_Pro({
 });
 
 export const metadata: Metadata = {
-  title: "Aleksandra Borisova Studio",
+  title: "Formae Bureau",
   description: "Interior design in the Netherlands",
 };
 
