@@ -14,7 +14,8 @@
 
 .block-text-and-image__image-wrapper {
     position: relative;
-    height: 427px;
+    aspect-ratio: 2 / 3;
+    height: auto;
     width: 285px;
 }
 

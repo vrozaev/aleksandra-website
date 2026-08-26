@@ -1,18 +1,11 @@
 export const ABOUT_PAGE = {
     title: 'About',
-    image: '/aleksandra-website/pages/about/about.webp',
+    image: '/aleksandra-website/pages/about/about-team.webp',
     paragraphs: [
-        `
-    My name is Aleksandra — I’m the founder of interior design studio based in Utrecht, working across the Netherlands.
-  `,
-        `
-    My background is in architecture. Since 2016, I’ve been designing private homes and office buildings, and from 2019 to 2022 I also worked in landscape architecture, creating urban public spaces.
-      This blend of experiences helps me see each project as a whole — the home, its surroundings, and how they connect — allowing me to create spaces that feel natural, balanced, and truly lived in.
-  `,
-        `
-    In the Netherlands, I founded my studio to focus on thoughtful interiors and renovation projects.
-      I’m inspired by timeless design, craftsmanship, and the idea of sustainable living — and I’m happy to be part of this growing movement here.
-  `
+        'Meet Marina & Aleksandra, the founders behind FORMAE, brought together by a shared purpose: creating beauty that works.',
+        'FORMAE is a full-service interior design studio creating and realising beautiful spaces – from the first idea to the final interior.',
+        'With experience across interiors, architecture and landscape, FORMAE approaches each space as a whole – looking at what is already there, what can be transformed, and what needs to happen for a space to feel right.',
+        'From the first sketch to the final installation, FORMAE stays close to the process – developing the concept, working with materials, sourcing furniture and overseeing the build. Making sure the idea works in the space, not just on paper.',
     ]
 };
 

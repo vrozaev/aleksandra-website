@@ -10,7 +10,7 @@ export default function Home() {
     <Page maxWidth="l">
         <div className={styles['page__main-block']}>
           <div className={styles['page__main-block-text-wrapper']}>
-            <Text variant="h1">Aleksandra Borisova Studio</Text>
+            <Text variant="h1">Formae Bureau</Text>
             <Text variant="h2">Interior design, supervision</Text>
           </div>
         </div>

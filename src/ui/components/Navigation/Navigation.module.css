@@ -12,6 +12,26 @@
     transition: color 180ms ease;
 }
 
+.navigation__logo {
+    position: absolute;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.navigation__logo-image {
+    display: block;
+    width: auto;
+    height: 48px;
+    mix-blend-mode: multiply;
+}
+
+.navigation__links {
+    display: flex;
+    align-items: center;
+}
+
 .navigation__link:hover,
 .navigation__link:focus-visible,
 .navigation__mobile-link:hover,
@@ -47,7 +67,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    justify-content: right;
+    justify-content: space-between;
     align-items: center;
     padding: 0 30px;
     z-index: 1;
@@ -82,5 +102,13 @@
     }
     .navigation__mobile {
         display: flex;
+    }
+
+    .navigation__logo {
+        position: static;
+    }
+
+    .navigation__logo-image {
+        height: 42px;
     }
 }

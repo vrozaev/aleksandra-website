@@ -1,4 +1,4 @@
-# Aleksandra Borisova Studio
+# Formae Bureau
 
 ## Preparing images
 
