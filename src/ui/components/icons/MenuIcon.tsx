@@ -13,7 +13,7 @@ export const MenuIcon: React.FC<MenuIconProps> = ({onClick, className}) => {
         <svg 
             className={cc(styles['icon'], className)}
             onClick={onClick}
-            fill="#000000" 
+            fill="currentColor"
             width="30px" 
             height="30px" 
             viewBox="0 0 20 20" 

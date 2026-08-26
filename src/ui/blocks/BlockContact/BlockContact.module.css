@@ -1,7 +1,7 @@
 .block-contact {
     max-width: 500px;
     margin: 120px auto 0 auto;
-    border: 1px solid gray;
+    border: 1px solid var(--border-color);
     padding: 40px 60px;
 }
 

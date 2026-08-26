@@ -1,5 +1,7 @@
 .button {
     cursor: pointer;
+    color: var(--foreground);
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 
 .button_view_cta {
@@ -11,4 +13,12 @@
     padding-bottom: 15px;
     padding-left: 40px;
     font-size: 16px;
+    border-color: var(--foreground);
+}
+
+.button_view_cta:hover,
+.button_view_cta:focus-visible {
+    color: var(--color-white);
+    background: var(--accent);
+    border-color: var(--accent);
 }

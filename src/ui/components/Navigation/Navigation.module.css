@@ -8,6 +8,14 @@
 .navigation__link {
     text-transform: uppercase;
     padding: 0 15px;
+    transition: color 180ms ease;
+}
+
+.navigation__link:hover,
+.navigation__link:focus-visible,
+.navigation__mobile-link:hover,
+.navigation__mobile-link:focus-visible {
+    color: var(--accent);
 }
 
 .navigation__mobile-link {
@@ -27,7 +35,7 @@
     align-items: center;
     background: var(--background);
     z-index: 1;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .navigation__mobile {
@@ -42,7 +50,7 @@
     align-items: center;
     padding: 0 30px;
     z-index: 1;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid var(--border-color);
     background: var(--background);
 }
 
