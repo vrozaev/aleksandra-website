@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+    padding: clamp(40px, 6vw, 90px) 0 clamp(48px, 7vw, 100px);
+}
+
+.title {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 0;
+}
+
+.title > span {
+    padding-top: 6px;
+}
+
+.intro {
+    padding-top: 6px;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        gap: 24px;
+    }
+}

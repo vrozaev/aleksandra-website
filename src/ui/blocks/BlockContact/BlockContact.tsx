@@ -1,19 +1,20 @@
 import React from "react";
 import styles from './BlockContact.module.css';
 import { Link } from "@/ui/components/Link/Link";
+import { Text } from "@/ui/components/Text/Text";
 
 export const BlockContact: React.FC = () => {
     return (
         <section className={styles['block-contact']}>
             <div className={styles['block-contact__intro']}>
-                <p className={styles['block-contact__eyebrow']}>Start a project</p>
-                <h1 className={styles['block-contact__title']}>
-                    Let&apos;s create a space that feels like yours.
-                </h1>
-                <p className={styles['block-contact__copy']}>
+                <Text variant="label" className={styles['block-contact__eyebrow']}>Start a project</Text>
+                <Text as="h2" variant="pageTitle" className={styles['block-contact__title']}>
+                    Let&apos;s create a space that feels like <span className={styles['block-contact__marked']}>yours.</span>
+                </Text>
+                <Text variant="body" className={styles['block-contact__copy']}>
                     Tell us about your space, your ideas, and what you would like to change.
                     We would love to hear from you.
-                </p>
+                </Text>
             </div>
 
             <div className={styles['block-contact__links']}>
@@ -21,9 +22,9 @@ export const BlockContact: React.FC = () => {
                     className={styles['block-contact__link']}
                     href='mailto:contact@formaebureau.nl'
                 >
-                    <span className={styles['block-contact__label']}>Email</span>
-                    <span className={styles['block-contact__value']}>contact@formaebureau.nl</span>
-                    <span className={styles['block-contact__arrow']} aria-hidden='true'>↗</span>
+                    <Text as="span" variant="label" className={styles['block-contact__label']}>Email</Text>
+                    <Text as="span" variant="contactValue" className={styles['block-contact__value']}>contact@formaebureau.nl</Text>
+                    <Text as="span" variant="icon" className={styles['block-contact__arrow']} aria-hidden='true'>↗</Text>
                 </Link>
                 <Link
                     className={styles['block-contact__link']}
@@ -31,9 +32,9 @@ export const BlockContact: React.FC = () => {
                     target='_blank'
                     rel='noreferrer'
                 >
-                    <span className={styles['block-contact__label']}>Social</span>
-                    <span className={styles['block-contact__value']}>Instagram</span>
-                    <span className={styles['block-contact__arrow']} aria-hidden='true'>↗</span>
+                    <Text as="span" variant="label" className={styles['block-contact__label']}>Social</Text>
+                    <Text as="span" variant="contactValue" className={styles['block-contact__value']}>Instagram</Text>
+                    <Text as="span" variant="icon" className={styles['block-contact__arrow']} aria-hidden='true'>↗</Text>
                 </Link>
                 <Link
                     className={styles['block-contact__link']}
@@ -41,9 +42,9 @@ export const BlockContact: React.FC = () => {
                     target='_blank'
                     rel='noreferrer'
                 >
-                    <span className={styles['block-contact__label']}>Network</span>
-                    <span className={styles['block-contact__value']}>LinkedIn</span>
-                    <span className={styles['block-contact__arrow']} aria-hidden='true'>↗</span>
+                    <Text as="span" variant="label" className={styles['block-contact__label']}>Network</Text>
+                    <Text as="span" variant="contactValue" className={styles['block-contact__value']}>LinkedIn</Text>
+                    <Text as="span" variant="icon" className={styles['block-contact__arrow']} aria-hidden='true'>↗</Text>
                 </Link>
             </div>
         </section>

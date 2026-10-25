@@ -1,25 +1,30 @@
 .button {
-    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+    min-height: 54px;
+    padding: 17px 22px;
+    border: 1px solid var(--foreground);
+    background: transparent;
     color: var(--foreground);
-    font-family: var(--font-heading);
+    cursor: pointer;
     transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 
-.button_view_cta {
-    background: none;
-    border-width: 1px;
-    border-style: solid;
-    padding-top: 15px;
-    padding-right: 40px;
-    padding-bottom: 15px;
-    padding-left: 40px;
-    font-size: 16px;
-    border-color: var(--foreground);
+.button > span:last-child {
+    color: var(--accent);
 }
 
 .button_view_cta:hover,
 .button_view_cta:focus-visible {
+    border-color: var(--foreground);
+    background: var(--foreground);
     color: var(--color-white);
-    background: var(--accent);
-    border-color: var(--accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none;
+    }
 }

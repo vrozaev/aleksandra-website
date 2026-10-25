@@ -1,20 +1,102 @@
 .project-card {
-    width: 350px;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    text-decoration: none;
 }
 
-.project-card_clickable {
+a.project-card,
+button.project-card {
     cursor: pointer;
 }
 
-.project-card__image-wrapper {
-    height: 500px;
-    width: 100%;
-    position: relative;
+.project-card__heading {
+    padding-bottom: 20px;
+}
+
+.project-card__index {
+    display: block;
+    margin-bottom: 30px;
+}
+
+.project-card__index > span {
+    margin-right: 9px;
+    color: var(--accent);
 }
 
 .project-card__name {
-    margin-top: 25px;
-    display: flex;
-    justify-content: center;
-    text-transform: uppercase;
+    min-height: 2.8em;
+    margin: 0 0 6px;
+}
+
+.project-card__details {
+    min-height: 3em;
+    color: var(--color-muted, #656565);
+}
+
+.project-card__image-wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.78;
+    overflow: hidden;
+    background: #e4e2de;
+}
+
+.project-card__image {
+    object-fit: cover;
+    transition: transform 600ms ease;
+}
+
+.project-card__open {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    display: grid;
+    width: 34px;
+    height: 34px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    background: rgba(37, 37, 37, 0.18);
+    color: white;
+    transition: background 200ms ease;
+}
+
+.project-card:hover .project-card__image,
+.project-card:focus-visible .project-card__image {
+    transform: scale(1.025);
+}
+
+.project-card:hover .project-card__open,
+.project-card:focus-visible .project-card__open {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+@media (max-width: 600px) {
+    .project-card__index {
+        margin-bottom: 18px;
+    }
+
+    .project-card__name,
+    .project-card__details {
+        min-height: 0;
+    }
+
+    .project-card__heading {
+        padding-bottom: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card__image,
+    .project-card__open {
+        transition: none;
+    }
 }

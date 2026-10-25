@@ -13,8 +13,10 @@ export const BlockProjectsList: React.FC<BlockProjectsListProps> = ({projects}) 
             <ProjectCard
                 href={`/projects/${project.slug}`}
                 name={project.name}
+                details={project.details}
                 image={project.images[0]}
-                key={index}
+                index={index}
+                key={project.slug}
             />
         ))}
     </ProjectCardWrapper>
