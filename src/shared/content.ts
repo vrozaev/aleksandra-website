@@ -11,13 +11,9 @@ export const ABOUT_PAGE = {
 
 export const SERVICES_PAGE = {
     title: 'Services',
-    image: '/aleksandra-website/pages/about/about.webp',
-    paragraphs: [
-        'We create and realise interiors, bringing the concept, materials, furniture and build together as one considered whole.',
-        'Our work begins with understanding your space and how you want to live in it. We stay close to the process, from the first sketch to the final installation.',
-    ],
     services: [
         {
+            id: 'pre-concept-design',
             title: 'Pre-Concept Design',
             sections: [
                 {
@@ -42,6 +38,7 @@ export const SERVICES_PAGE = {
             ],
         },
         {
+            id: 'concept-design',
             title: 'Concept Design',
             sections: [
                 {
@@ -68,6 +65,7 @@ export const SERVICES_PAGE = {
             ],
         },
         {
+            id: 'detailed-design-project',
             title: 'Detailed Design Project',
             sections: [
                 {
@@ -87,6 +85,7 @@ export const SERVICES_PAGE = {
             ],
         },
         {
+            id: 'design-supervision',
             title: 'Design Supervision',
             sections: [
                 {

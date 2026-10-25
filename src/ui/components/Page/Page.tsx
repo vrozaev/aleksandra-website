@@ -13,6 +13,7 @@ type PageProps = {
     className?: string;
     children: React.ReactNode;
     maxWidth: keyof typeof MAX_WIDTH_OPTIONS;
+    compactTitleSpacing?: boolean;
 };
 
 export const Page: React.FC<PageProps> = ({
@@ -20,6 +21,7 @@ export const Page: React.FC<PageProps> = ({
     className,
     children,
     maxWidth,
+    compactTitleSpacing = false,
 }) => {
     return (
         <main
@@ -28,7 +30,17 @@ export const Page: React.FC<PageProps> = ({
             className={cc(styles['page'], className)}
             style={{maxWidth: MAX_WIDTH_OPTIONS[maxWidth]}}
         >
-            {title ? <Text variant='h1' className={styles['page__title']}>{title.toUpperCase()}</Text> : null}
+            {title ? (
+                <Text
+                    variant='h1'
+                    className={cc(
+                        styles['page__title'],
+                        compactTitleSpacing && styles['page__title_compact'],
+                    )}
+                >
+                    {title.toUpperCase()}
+                </Text>
+            ) : null}
             {children}
         </main>
     );
