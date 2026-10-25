@@ -1,6 +1,7 @@
 import { BlockProject } from "@/ui/blocks/BlockProject/BlockProject";
 import { PROJECTS_LIST } from "@/shared/projects";
 import { Page } from "@/ui/components/Page/Page";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   return PROJECTS_LIST.map(({slug}) => ({slug}));
@@ -9,7 +10,9 @@ export async function generateStaticParams() {
 export default async function ProjectPage({params}: {params: Promise<{slug: string}>}) {
   const {slug} = await params;
 
-  const project = PROJECTS_LIST.find((project) => project.slug === slug)!;
+  const project = PROJECTS_LIST.find((project) => project.slug === slug);
+
+  if (!project) notFound();
 
   return (
     <Page maxWidth="l">

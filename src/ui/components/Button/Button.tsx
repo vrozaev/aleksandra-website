@@ -2,6 +2,7 @@ import React from "react";
 import styles from './Button.module.css';
 import { Link } from "../Link/Link";
 import { cc } from "../utils/cc";
+import { Text } from "../Text/Text";
 
 type ButtonProps = {
     children: React.ReactNode;
@@ -10,13 +11,11 @@ type ButtonProps = {
 };
 
 export const Button: React.FC<ButtonProps> = ({children, href, className}) => {
-    const jsx = (
-        <button className={cc(styles['button'], styles['button_view_cta'], className)}>{children}</button>
-    );
+    const buttonClassName = cc(styles['button'], styles['button_view_cta'], className);
 
     if (href) {
-        return <Link href={href}>{jsx}</Link>
+        return <Link className={buttonClassName} href={href}><Text as="span" variant="label">{children}</Text><Text as="span" variant="iconButton" aria-hidden='true'>↗</Text></Link>;
     }
 
-    return jsx;
+    return <button type='button' className={buttonClassName}><Text as="span" variant="label">{children}</Text><Text as="span" variant="iconButton" aria-hidden='true'>↗</Text></button>;
 };

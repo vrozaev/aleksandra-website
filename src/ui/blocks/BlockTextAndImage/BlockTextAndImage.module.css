@@ -1,31 +1,82 @@
 .block-text-and-image {
-    display: flex;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    align-items: center;
+    column-gap: clamp(36px, 7vw, 112px);
 }
 
-.block-text-and-image__section {
-    display: flex;
-    flex-direction: column;
-}
-
-.block-text-and-image__paragraph {
-    padding-bottom: 1.5em;
+.block-text-and-image__figure {
+    align-self: start;
 }
 
 .block-text-and-image__image-wrapper {
     position: relative;
-    aspect-ratio: 2 / 3;
-    height: auto;
-    width: 285px;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: var(--border-color);
 }
 
-@media only screen and (min-width: 1px) and (max-width: 999px) {
+.block-text-and-image__image {
+    object-fit: cover;
+    object-position: center 45%;
+}
+
+.block-text-and-image__caption {
+    padding-top: 16px;
+    color: var(--color-muted);
+}
+
+.block-text-and-image__section {
+    max-width: 620px;
+    padding: 24px 0 48px;
+}
+
+.block-text-and-image__eyebrow {
+    margin-bottom: 30px;
+    color: var(--color-muted);
+}
+
+.block-text-and-image__eyebrow::before {
+    content: "/";
+    margin-right: 14px;
+    color: var(--accent);
+}
+
+.block-text-and-image__title {
+    max-width: 600px;
+    margin-bottom: 36px;
+}
+
+.block-text-and-image__paragraph {
+    max-width: 560px;
+    color: var(--color-muted);
+}
+
+.block-text-and-image__paragraph + .block-text-and-image__paragraph {
+    margin-top: 20px;
+}
+
+@media (max-width: 799px) {
     .block-text-and-image {
-        flex-direction: column;
-        gap: 40px;
+        grid-template-columns: 1fr;
+        gap: 36px;
     }
 
-    .block-text-and-image__image-wrapper {
+    .block-text-and-image__figure {
+        max-width: 560px;
         width: 100%;
+    }
+
+    .block-text-and-image__section {
+        padding: 0;
+    }
+
+    .block-text-and-image__eyebrow {
+        margin-bottom: 22px;
+    }
+
+    .block-text-and-image__title {
+        max-width: 540px;
+        margin-bottom: 26px;
     }
 }

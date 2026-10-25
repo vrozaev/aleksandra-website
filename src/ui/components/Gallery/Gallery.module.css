@@ -1,43 +1,101 @@
 .gallery {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    padding: 20px;
+    width: 100vw;
+    height: 100dvh;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    border: 0;
+    padding: 20px var(--page-gutter, 24px);
+    background: rgba(25, 25, 25, 0.97);
+    color: var(--color-off-white);
+    overflow: hidden;
+}
+
+.gallery::backdrop {
+    background: rgba(25, 25, 25, 0.97);
 }
 
 .gallery__content {
-    max-width: 90vw;
-    max-height: 90vh;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    margin: auto;
+    gap: 16px;
+}
+
+.gallery__header {
     display: flex;
     align-items: center;
-    gap: 16px;
+    justify-content: space-between;
+    gap: 24px;
 }
 
 .gallery__image-wrapper {
     position: relative;
-    width: min(80vw, 1000px);
-    height: min(80vh, 800px);
-    cursor: pointer;
+    min-height: 0;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    background: transparent;
+    cursor: e-resize;
 }
 
-.gallery__button {
-    cursor: pointer;
+.gallery__image-wrapper:disabled {
+    cursor: default;
 }
 
+.gallery__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.gallery__counter span {
+    padding: 0 10px;
+    color: var(--accent);
+}
+
+.gallery__button,
 .gallery__close {
-    position: fixed;
-    top: 50px;
-    right: 50px;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    padding: 0;
+    border: 1px solid rgba(242, 242, 242, 0.5);
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
 }
 
-@media only screen and (min-width: 1px) and (max-width: 999px) {
-    .gallery__close {
-        position: fixed;
-        top: 25px;
-        right: 25px;
+.gallery__button:hover,
+.gallery__close:hover {
+    border-color: var(--accent);
+    background: var(--accent);
+}
+
+.gallery__button:disabled {
+    visibility: hidden;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        padding-top: 12px;
+        padding-bottom: 20px;
+    }
+
+    .gallery__content {
+        gap: 12px;
+    }
+
+    .gallery__name {
+        max-width: 24ch;
     }
 }

@@ -31,6 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${alata.variable} ${sourceCodePro.variable}`}>
       <body>
+        <a className="skip-link" href="#main-content">Skip to content</a>
         <Navigation />
         <Content>
           {children}

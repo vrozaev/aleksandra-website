@@ -1,20 +1,15 @@
 .page {
     margin: auto;
     width: 100%;
-    padding: 0 60px 80px 60px;
-    min-height: 600px;
-    max-width: 1200px;
+    padding: 64px var(--page-gutter) 112px;
+    min-height: 60vh;
 }
-
 .page__title {
-    display: block;
-    text-align: center;
-    text-transform: uppercase;
+    padding-bottom: 36px;
+    margin-bottom: 56px;
+    border-bottom: 1px solid var(--border-color);
 }
-
-@media only screen and (min-width: 1px) and (max-width: 999px) {
-    .page {
-        padding: 0 20px 60px 20px;
-        min-height: auto;
-    }
+@media (max-width: 767px) {
+    .page { padding-top: 40px; padding-bottom: 72px; }
+    .page__title { padding-bottom: 24px; margin-bottom: 32px; }
 }

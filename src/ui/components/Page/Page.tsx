@@ -1,12 +1,11 @@
 import React from "react";
 import { Text } from "@/ui/components/Text/Text";
 import { cc } from "../utils/cc";
-import { Spacer } from "@/ui/components/Spacer/Spacer";
 import styles from "./Page.module.css";
 
 const MAX_WIDTH_OPTIONS = {
-    'm': '1000px',
-    'l': '1400px',
+    'm': '1120px',
+    'l': '1600px',
 } as const;
 
 type PageProps = {
@@ -24,12 +23,12 @@ export const Page: React.FC<PageProps> = ({
 }) => {
     return (
         <main
+            id="main-content"
+            tabIndex={-1}
             className={cc(styles['page'], className)}
             style={{maxWidth: MAX_WIDTH_OPTIONS[maxWidth]}}
         >
-            {title ? <Spacer size="m" /> : null}
-            {title ? <Text variant='h2' className={styles['page__title']}>{title}</Text> : null}
-            {title ? <Spacer size="m" /> : null}
+            {title ? <Text variant='h1' className={styles['page__title']}>{title.toUpperCase()}</Text> : null}
             {children}
         </main>
     );

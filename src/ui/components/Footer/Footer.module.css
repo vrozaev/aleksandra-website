@@ -1,12 +1,161 @@
 .footer {
-    display: flex;
-    height: var(--footer-height);
-    flex-direction: column;
-    justify-content: center;
     width: 100%;
+    border-top: 1px solid var(--border-color);
+    background: var(--background);
+}
+
+.inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 var(--page-gutter, 40px);
+}
+
+.invitation {
+    display: grid;
+    grid-template-columns: 1fr 1.65fr;
+    gap: 48px;
+    padding: 72px 0 80px;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding-top: 10px;
+}
+
+.eyebrow span {
+    color: var(--accent);
+}
+
+.invitationBody {
+    max-width: 730px;
+}
+
+.title {
+    max-width: 680px;
+    margin-bottom: 30px;
+}
+
+.email {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid currentColor;
+    transition: color 180ms ease;
+}
+
+.email > span:last-child {
+    color: var(--accent);
+}
+
+.email:hover,
+.socials a:hover {
+    color: var(--accent);
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    align-items: center;
+    gap: 32px;
+    min-height: 120px;
+    padding: 30px 0;
     border-top: 1px solid var(--border-color);
 }
 
-.footer__copyright {
-    text-align: center;
+.logo {
+    display: flex;
+    width: fit-content;
+}
+
+.logoImage {
+    display: block;
+    width: 122px;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+.socials {
+    display: flex;
+    gap: 24px;
+}
+
+.socials a {
+    padding: 10px 0;
+    white-space: nowrap;
+    transition: color 180ms ease;
+}
+
+.socials a > span:last-child {
+    color: var(--accent);
+}
+
+.copyright {
+    text-align: right;
+    white-space: nowrap;
+}
+
+@media (max-width: 999px) {
+    .invitation {
+        grid-template-columns: 0.7fr 1.3fr;
+        gap: 30px;
+        padding: 56px 0 64px;
+    }
+
+    .bottom {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .location {
+        text-align: right;
+    }
+}
+
+@media (max-width: 599px) {
+    .invitation {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 40px 0 48px;
+    }
+
+    .eyebrow {
+        padding-top: 0;
+    }
+
+    .title {
+        max-width: 380px;
+        margin-bottom: 26px;
+    }
+
+    .email {
+        gap: 20px;
+    }
+
+    .bottom {
+        gap: 28px 16px;
+    }
+
+    .logoImage {
+        width: 110px;
+    }
+
+    .socials {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 359px) {
+    .bottom {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .location,
+    .copyright {
+        text-align: left;
+    }
 }
