@@ -27,7 +27,7 @@ export type TextVariant =
     | 'iconLarge'
     | 'iconClose';
 
-type TextTag = 'h1' | 'h2' | 'h3' | 'p' | 'span' | 'figcaption' | 'sup';
+type TextTag = 'h1' | 'h2' | 'h3' | 'h4' | 'p' | 'span' | 'figcaption' | 'sup';
 
 type TextProps = React.HTMLAttributes<HTMLElement> & {
     as?: TextTag;

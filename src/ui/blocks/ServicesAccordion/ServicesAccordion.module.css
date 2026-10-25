@@ -1,0 +1,123 @@
+.listRoot {
+    list-style: none;
+    border-top: 1px solid var(--border-color);
+}
+
+.item {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.summary {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 24px;
+    min-height: 116px;
+    padding: 24px 0;
+    cursor: pointer;
+    list-style: none;
+}
+
+.summary::-webkit-details-marker {
+    display: none;
+}
+
+.number {
+    color: var(--accent);
+}
+
+.title {
+    text-transform: uppercase;
+}
+
+.toggle {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+}
+
+.toggle::before,
+.toggle::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 1px;
+    background: currentColor;
+    content: '';
+    transform: translate(-50%, -50%);
+    transition: transform 180ms ease;
+}
+
+.toggle::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.details[open] .toggle::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px clamp(32px, 6vw, 96px);
+    padding: 8px 68px 56px 80px;
+}
+
+.section {
+    max-width: 620px;
+}
+
+.sectionTitle {
+    margin-bottom: 14px;
+}
+
+.copy + .copy,
+.copy + .list,
+.list + .copy {
+    margin-top: 18px;
+}
+
+.list {
+    padding-left: 18px;
+}
+
+.list li + li {
+    margin-top: 4px;
+}
+
+@media (hover: hover) {
+    .summary:hover .title,
+    .summary:hover .toggle {
+        color: var(--accent);
+    }
+}
+
+@media (max-width: 767px) {
+    .summary {
+        grid-template-columns: 34px minmax(0, 1fr) 36px;
+        gap: 12px;
+        min-height: 94px;
+        padding: 20px 0;
+    }
+
+    .toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 4px 0 42px 46px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .toggle::before,
+    .toggle::after {
+        transition: none;
+    }
+}
